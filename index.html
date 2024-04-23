@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="icon" href="calc1.jpg">
+    <title>Payroll calculator</title>
+</head>
+<style>
+    .benav {
+        color: rgb(65, 63, 61);
+        margin-left: 520px;
+    }
+
+    .belownav {
+        color: rgb(61, 76, 76);
+        font-size: 17px;
+        margin-left: 520px;
+    }
+
+    .calcbutton {
+        padding: 20px;
+        margin-left: 550px;
+
+
+    }
+
+    .mb-3 {
+        width: 150px;
+        margin-left: 550px;
+    }
+
+    .mb-4 {
+        width: 150px;
+        margin-left: 550px;
+    }
+
+    .partA {
+        background-image: url(monn.jpg);
+    }
+
+    .table {
+        background-image: url(calc1.jpg);
+    }
+
+    .partB {
+        margin-top: 40px;
+        background-image: url(black.jpg);
+    }
+</style>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="payroll-logo.png" alt="Bootstrap" width="60" height="50">
+            </a>
+        </div>
+    </nav>
+
+    <div class="partA">
+        <div class="benav">
+            <h1>NET PAY CALCULATOR</h1>
+        </div>
+
+
+        <div class="belownav">
+            Enter the gross salary amount below to calculate your net amount.
+
+        </div>
+
+        <form id="myform">
+            <div class="mb-3">
+                <label for="inputbasicsalary" class="form-label">BasicSalary</label>
+                <input type="number" class="form-control" id="inputbasicsalary" aria-describedby="basicSalary">
+            </div>
+            <div class="mb-4">
+                <label for="inputbenefits" class="form-label">Benefits</label>
+                <input type="number" class="form-control" id="inputbenefits">
+            </div>
+            <div class="calcbutton">
+                <button type="submit" class="btn btn-primary">calculate</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="partB">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Descripton</th>
+                    <th scope="col">Result</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Gross Salary</th>
+                    <td id="grosssal"></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">NSSF</th>
+                    <td id="NSSF"></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">NHDF</th>
+                    <td id="NHDF"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Final Payee</th>
+                    <td id="PAYEE"></td>
+                </tr>
+                <tr>
+                    <th scope="row">NHIF</th>
+                    <td id="NHIF"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Net pay</th>
+                    <td id="NETP"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+</html>
